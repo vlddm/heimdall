@@ -25,6 +25,7 @@ ENV GOBIN $GOPATH/bin
 RUN make build
 
 
+
 # Pull all binaries into a second stage deploy alpine container
 FROM ubuntu:latest
 
