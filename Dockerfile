@@ -32,7 +32,7 @@ RUN apt-get update -y \
   && apt-get install -y curl \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-  && curl -q -o /genesis.json https://raw.githubusercontent.com/maticnetwork/launch/master/mainnet-v1/without-sentry/heimdall/config/genesis.json
+  && curl -s -o /genesis.json https://raw.githubusercontent.com/maticnetwork/launch/master/mainnet-v1/without-sentry/heimdall/config/genesis.json
 
 # Copy required binarires to new container
 COPY --from=builder /root/heimdall/build/* /usr/local/bin/
