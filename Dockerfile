@@ -6,7 +6,7 @@
 # and a workspace (GOPATH) configured at /go.
 FROM golang:latest as builder
 
-ENV VERSION=v0.2.1-mainnet
+ARG VERSION
 
 # update available packages
 RUN apt-get update -y && \
