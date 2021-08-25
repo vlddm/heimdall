@@ -13,7 +13,7 @@ RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt install build-essential git -y && \
     cd /root && \
-    git clone --depth=1 -b $VERSION https://github.com/maticnetwork/heimdall.git
+    git clone --depth=1 -b $VERSION -c advice.detachedHead=false https://github.com/maticnetwork/heimdall.git
 
 # change work directory
 WORKDIR /root/heimdall
